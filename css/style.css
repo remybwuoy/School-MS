@@ -1,0 +1,1434 @@
+/*scroll width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+  background: rgb(8, 26, 128); 
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(23, 23, 37); 
+  border-radius: 30px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family:monospace ;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-blue{
+background: rgb(8, 26, 128);
+}
+
+.bg-bblack{
+  background: rgb(2, 10, 56);
+}
+
+h1,h2,h3,h4,h5{
+  text-shadow: 0.5px 0.5px 0.5px rgba(85, 86, 88, 0.425);
+  font-family:monospace ;
+  font-weight: bolder;
+
+}
+
+.offcanvas-collapse{
+  color: #ffffff;
+}
+
+.offcanvas-collapse :hover{
+  color: gold;
+}
+
+.navbar-brand{
+  /* font-family: 'Segoe UI Black', 'Poppins', sans-serif;*/
+  font-family: 'Acme', sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  display: inline-block;
+}
+
+.navbar-nav li a{
+  font-size: 14px;
+  font-family: 'Raleway', 'Poppins', sans-serif;
+  font-weight: bold;
+  z-index: 9999;
+
+}
+
+.navbar-nav li a:hover{
+      transform: scale(1.03);
+      transition: all 0.2s ease-out;
+      border-radius: 4px;
+      text-shadow: 0.5px  0.5px  0.5px #000;
+      background: rgb(230, 196, 7);
+      z-index: 9999;
+  }
+  .nav-item dropdown .dropdown-menu li a{
+    text-shadow: none;
+ 
+  }
+
+@media (max-width: 991.98px) {
+.offcanvas-collapse {
+      position: fixed;
+      top: 56px; /* Height of navbar */
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      overflow-y: auto;
+      visibility: hidden;
+      color: #ffffff;
+      background-color: rgba(3, 13, 73, 0.863);
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.offcanvas-collapse.open {
+  visibility: visible;
+  transform: translateX(-100%);
+}
+}
+
+
+@media all and (min-width: 992px) {
+      .navbar .nav-item .dropdown-menu{ display: none; }
+      .navbar .nav-item:hover .dropdown-menu{ display: block; }
+      .navbar .nav-item .dropdown-menu{ margin-top:0; }
+      .navbar{ padding-top: 0; padding-bottom: 0; }
+      .navbar .has-megamenu{position:static!important;}
+      .navbar .megamenu{left:0; right:0; width:100%; padding:20px;  }
+      .navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
+}	
+
+@media all and (min-width:991px) {  
+  .dropdown:after{
+      content: ''; 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: opacity .15s ease-in-out;
+        opacity: 0;
+        visibility:hidden;
+        background-color: rgba(0,0,0,.5);
+        pointer-events: none;
+    }
+
+  .dropdown:hover .nav-link{
+      position:relative;
+      z-index:12;
+    }
+
+  .dropdown:hover:after{
+      z-index:10; opacity:1; 
+      visibility:visible;
+      position: fixed;
+  }
+}
+
+.header{
+  background: linear-gradient(rgb(102, 102, 243), rgb(12, 12, 39));
+}
+
+.bg-black2{
+  background: rgba(3, 8, 51, 0.726);
+  text-decoration: none ;
+  width: fit-content;
+}
+
+.carousel-inner{
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+
+.carousel-inner img{
+    position: absolute;
+    height: 600px;
+    background: linear-gradient(rgb(102, 102, 243), rgb(12, 12, 39));
+}
+
+.carousel-item {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+}
+
+.carousel-caption {
+    margin-bottom: 130px;
+    z-index: 10;
+    text-shadow: 1px 1px 1px #000;
+
+}
+
+.carousel-caption h5{
+font-size: 30px;
+text-shadow: 1px 1px 1px #000;
+
+}
+
+.carousel-caption h1{
+  font-size: 60px;
+  padding: 10px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #000;
+  }
+
+@media only screen and (max-width:1000px)
+{
+  .carousel-inner{
+      width: 100%;
+      height: 500px;
+  }
+
+    .carousel-inner img{
+      height: 500px;
+}
+
+  .carousel-caption {
+      margin-bottom: 180px;
+      z-index: 10;
+}
+
+
+
+ }
+
+@media only screen and (max-width:910px)
+{
+  .carousel-inner{
+      width: 100%;
+      height: 530px;
+  }
+
+  .carousel-inner img{
+      height: 530px;
+}
+
+.carousel-caption {
+  margin-bottom: 150px;
+  z-index: 10;
+}
+
+}
+
+@media only screen and (max-width:800px)
+{
+  .carousel-inner{
+      width: 1000px;
+      height: 400px;
+  }
+
+  .carousel-inner img{
+      height: 400px;
+}
+
+ .carousel-caption {
+    margin-bottom: 200px;
+    z-index: 10;
+}
+
+.carousel-caption h5{
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #000;
+  
+  }
+  
+  .carousel-caption h1{
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000;
+    }
+  
+
+}
+
+@media only screen and (max-width:700px)
+{
+  .carousel-inner{
+      width: 100%;
+      height: 400px;
+  }
+
+  .carousel-inner img{
+      height: 450px;
+}
+
+.carousel-caption {
+  margin-bottom: 200px;
+  z-index: 10;
+}
+
+.carousel-caption h5{
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #000;
+  
+  }
+  
+  .carousel-caption h1{
+    font-size: 45px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000;
+    }
+  
+
+}
+
+
+@media only screen and (max-width:430px)
+{
+  .carousel-inner{
+      width: 100%;
+      height: 450px;
+  }
+
+  .carousel-inner img{
+      height: 450px;
+}
+
+.carousel-caption {
+  margin:0px 0px 150px 0px;
+  z-index: 10;
+}
+
+.carousel-caption h5{
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #000;
+  
+  }
+  
+  .carousel-caption h1{
+    font-size: 45px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000;
+    }
+  
+
+}
+
+/*section1*/
+.section1{
+    padding:5px;
+    margin:0px  0px 0px 0px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 1px 1px 1px rgb(109, 109, 109);
+}
+
+ .section1 img{
+    margin: 30px;
+    text-align: center;
+    opacity: 1;
+}
+
+.section1 img:hover{
+    transform: rotateY(360deg);
+    transition: all 1.5s ease-out;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.sect2a img{
+background-size: cover;
+height: 100%;
+
+}
+
+ .sect2b{
+    background-image:  linear-gradient(rgba(12, 12, 39, 0.678), rgba(12, 12, 39, 0.856)),url(../img/about.jpg);
+    padding: 80px;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  .section2{
+    background-image: linear-gradient(rgba(6, 6, 61, 0.938),rgba(9, 9, 31, 0.911)), url(../img/youngblood.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 60px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 35px;
+  }
+
+  .section2 h2{
+  margin-left: 20px;
+  font-size: 35px;
+  }
+
+  .page4 .page4-2 p{
+  padding: 20px;
+}
+
+.page4 h3{
+  font-weight: bolder;
+}
+
+.page4-1 a{
+  text-decoration: none;
+}
+
+.page4-1 p:hover{
+color: #fff;
+}
+
+ .page4 .page4-3{
+    padding: 20px;
+    height: 110px;
+  }
+
+  .page4 .page4-3 button:hover{
+  opacity: 2;
+  background: darkblue;
+  }
+
+.tabs{
+background: rgba(228, 226, 226, 0.671);
+}
+
+.tabs .row{
+  padding:30px;
+margin-bottom: -20px;
+}
+
+.tabs .col-lg-7{
+  margin-top: 20px;
+}
+
+.tabs .tab-content{
+  padding:20px;
+font-size: 18px;
+  }
+
+
+.tabs p{
+font-size: 18px;
+  }
+
+  .subscribe{
+padding: 50px;
+  }
+
+  .subscribe img{
+margin: 100px 0px 30px 0px;
+width: 90px;
+height: 90px;
+}
+  .subscribe .form-group input{
+    border:none;  
+    border-radius: 3px;
+      font-size:17px;
+      width: 100%;
+      margin: 30px 0px 10px 0px;
+      padding: 18px;
+      color: rgb(255, 255, 255);
+      background: rgba(58, 48, 167, 0.829);
+    }
+
+    .subscribe   ::placeholder{
+      color: rgb(179, 177, 177);
+    }
+   
+    .course2{
+      padding: 80px; 
+      background-image: linear-gradient(90deg,rgba(0, 6, 31, 0.178) 4%,rgba(2, 9, 43, 0.904)45%,rgb(2, 9, 43)100% ), url(../img/setup.jpg);
+      background-attachment: fixed;
+      background-position: left;
+    background-size: cover;
+    font-weight: bold;
+    }
+    
+    .course2 .form-group input{
+      border:none;  
+      border-radius: 3px;
+        font-size:17px;
+        width: 100%;
+        padding: 18px;
+        color: rgb(255, 255, 255);
+        background: rgba(53, 44, 134, 0.568);
+      }
+     
+      .course2 ::placeholder{
+    color: rgb(252, 252, 252);
+      }
+
+      .course2 .form-group select{
+        border:none;  
+        border-radius: 3px;
+          margin: 8px 0px  0px 0px;
+          font-size:17px;
+          width: 100%;
+          padding: 15px;
+          color: #fff;
+          background: rgba(53, 44, 134, 0.568);
+        }
+    
+      .course2 button{
+    margin-top: 20px;  }
+
+/*admission*/
+.parallax{
+      background-image: linear-gradient(rgba(20, 20, 131, 0), rgba(14, 21, 88, 0.664)), url(../img/buld2.jpg);
+    width: 100%;
+    height:550px;
+    margin-top: 60px;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    border-radius: 10px;
+    text-shadow: 2px 2px 2px rgb(53, 53, 53);
+}
+
+.parallax .top h3{
+  margin-top: 300px;
+  margin-left: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.top h1{
+  font-size: 65px;
+  margin-left: 50px;
+}
+
+
+.attach{
+  background-image: linear-gradient(rgba(9, 9, 31, 0.856),rgba(2, 13, 71, 0.925) ), url(../img/about.jpg);
+  padding: 40px;
+}
+
+.attach img{
+  margin-bottom: 14px;
+}
+
+.back{
+    background-attachment: fixed;
+    background-image:linear-gradient(rgba(11, 52, 90, 0), rgba(9, 9, 31, 0.445)), url(../img/buld2.jpg);
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.page2{
+  padding: 20px;
+}
+
+.page2 h4{
+  text-shadow: 1px 1px 1px rgba(75, 74, 74, 0.822);
+  border-radius: 20px;
+  padding: 12px;
+  color: #fff;
+}
+
+.page2 p{
+  border-radius: 5px;
+  padding: 10px;
+  text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.315);
+ }
+
+.line{
+  border: 1.2px solid blue;
+  margin:0px 0px 20px 00px;
+  border-radius: 10px;
+}
+
+
+.page3{
+  margin-top: 60px;
+}
+
+button{
+  margin: 20px 0px 20px 0px;
+}
+
+.page4{
+  margin: 0;
+}
+
+.page4 h3{
+  margin-top: 40px;
+}
+
+.page4-1{
+  background-image: linear-gradient(rgba(9, 9, 31, 0.89),rgb(2, 13, 71) ), url(../img/buld2.jpg);
+  background-position: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page4-1 p{
+  margin-top: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #061574;
+  color: white;
+}
+
+@media only screen and (max-width:800px)
+{
+  .parallax{
+  width: 100%;
+  height:380px;
+  background-size: cover;
+
+  }
+  .parallax .top h3{
+    margin-top: 160px;
+    margin-left: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  .top h1{
+    font-size: 43px;
+    margin-left: 40px;
+    font-weight: bolder;
+
+  }
+  
+}
+
+
+
+/*admission-end*/
+
+
+/*about-end*/
+
+.parallax1{
+  background-image: linear-gradient(rgba(80, 80, 94, 0), rgba(5, 5, 14, 0.993)), url(../img/bld2.jpg);
+width: 100%;
+height:650px;
+margin-top: 60px;
+background-size: cover;
+background-position: center;
+text-shadow: 2px 2px 2px rgb(39, 39, 39);
+}
+
+
+
+
+.parallax1 .top h3{
+  margin-top: 400px;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width:500px)
+{
+
+  .parallax1{
+    background-image: linear-gradient(rgba(80, 80, 94, 0), rgba(5, 5, 14, 0.993)), url(../img/bld2.jpg);
+  width: 100%;
+  height:300px;
+  margin-top: 60px;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px 2px rgb(39, 39, 39);
+  }
+  
+  
+  .parallax1 .top h3{
+    margin-top: 150px;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+  }
+
+  .parallax1 .top h1{
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+  }
+}
+
+.about1{
+  width: 100%;
+  background-size: cover;
+}
+
+.about1 img{
+margin-top: 45px;
+}
+
+.about1-1{
+padding:10px 50px 10px 50px;
+}
+
+.about2{
+ background: rgb(2, 7, 37);
+  width: 100%;
+  margin-top: -1.8px;
+  padding: 50px;
+}
+
+.about2 h5{
+  margin: 20px 0px 20px 0px;
+}
+
+.attach1{
+  background-image: linear-gradient(rgba(2, 13, 71, 0.753),rgba(2, 13, 71, 0.925) ), url(../img/bld2.jpg);
+  padding: 40px;
+  width: 100%;
+  margin: 0px;
+  background-attachment: fixed;
+  background-position: center;
+background-size: cover;
+}
+
+
+.attach1 img{
+  margin-bottom: 14px;
+  width: 65px;
+  height: 63px;
+}
+
+.attach1 h2{
+  margin: 20px;
+  font-weight: bold;
+}
+
+.attach1-mid{
+  background: rgb(4, 4, 49);
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.back1{
+  background-image: url(../img/buildingc.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height:100% ;
+  margin-right: -450px;
+}
+
+.back2{
+  background-image: url(../img/st3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height:100% ;
+  width: 100%;
+
+}
+
+.back3{
+  background-image: url(../img/study\ halls.jpg);
+  background-attachment: fixed;
+  background-size: contain; 
+  background-position: center;
+  width: 100%;
+  height:100% ;
+}
+
+
+/*about-end*/
+
+
+/*contact*/
+
+.parallax2{
+  background-image: linear-gradient(rgba(117, 117, 126, 0), rgba(39, 39, 75, 0.692)), url(../img/students.jpg);
+width: 100%;
+height:550px;
+margin-top: 60px;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+text-shadow: 2px 2px 2px rgba(43, 42, 42, 0.767);
+}
+
+.parallax2 h1{
+  margin-top: 200px;
+  font-family: Segoe UI Black;
+  font-weight: bold;
+  font-size: 76px;
+}
+
+.parallax2 p{
+  font-size: 36px;
+}
+
+.bg-black{
+  background: rgb(19, 19, 19);
+  text-decoration: none ;
+}
+
+.bg-black .col-lg-4{
+  padding: 60px;
+}
+
+.bg-black h3{
+  font-size: 30px;
+  font-family: Segoe UI Black;
+}
+.bg-black p{
+  font-weight: bold;
+  color: rgb(199, 198, 198);
+}
+
+.bg-black a{
+  text-decoration: none ;
+}
+
+
+.c-form{
+  background: rgb(252, 252, 252);
+
+}
+
+.c-form h1{
+  margin-top:80px ;
+  font-size: 40px;
+  font-family: Segoe UI Black;
+}
+
+.c-form p{
+  color: rgb(126, 124, 124);
+  font-weight: bold;
+  margin-bottom:80px ;
+}
+
+.c-form ::placeholder{
+  color: #333131c5;
+  font-weight: 500;
+
+}
+
+
+  .form-group input{
+  background:rgba(219, 219, 219, 0.726); 
+  border:none;  
+  border-radius: 3px;
+    margin: 8px 0px  0px 0px;
+    font-size:17px;
+    width: 100%;
+    padding: 15px;
+    color: rgb(116, 113, 113);
+  }
+  .form-group input.focus{
+  border: none;}
+
+  .form-group textarea{
+    background:rgba(219, 219, 219, 0.726); 
+    border:none;  
+    border-radius: 5px;
+      margin: 8px 0px 0px 0px;
+      font-size:17px;
+      width: 100%;
+      color: #000;
+    }
+
+   .form-row input{
+      width: 100%;
+    }
+
+  .form-group button{
+    width: 100%;
+  }
+
+
+.map{
+  width: 100%;
+
+}
+.api iframe {
+  width: 100%;
+  height: 500px;
+  border: 5px solid gold;
+  border-radius: 2px;
+  margin: 50px 0px 50px 0px;
+ }
+
+@media only screen and (max-width:800px)
+{
+  .parallax2{
+  width: 100%;
+  height:500px;
+  background-size: cover;
+background-position: center;
+}
+
+  .parallax2  h1{
+    margin-top: 210px;
+    margin-left:-10px;
+    font-weight: bold;
+    font-size: 56px;
+
+  }
+  
+.parallax2 p{
+  font-size: 30px;
+}
+}
+/*contact-end*/
+
+
+/*courses*/
+
+
+.course-top{
+  background-image: linear-gradient(rgba(2, 13, 71, 0.753),rgba(2, 13, 71, 0.925) ) ,url(../img/study.jpg);
+height:300px;
+background-attachment: fixed;
+background-position: right;
+border-radius:10px ;
+margin-bottom: 120px;
+
+}
+
+.course-top h1{
+  margin-top: 150px;
+  font-size: 70px;
+text-shadow: 1px 1px 1px #000;
+}
+
+.course{
+  margin-bottom: 50px;
+}
+
+.course h1{
+font-size: 45px;
+margin: 10px 0px 50px 0px;
+text-shadow: 1px 1px 1px rgb(185, 185, 185);
+}
+s
+.course h6{
+  margin: 150px 0px 10px 0px;
+font-style:sans-serif ;
+font-size: 17px;
+text-shadow: none;
+}
+
+.course  p, .course a{
+  margin-top:50px;
+  text-decoration:none;
+  font-weight: 500;
+}
+
+.attach2{
+  margin: 50px 0px 50px 0px; 
+  background-image: linear-gradient(rgba(2, 13, 71, 0.753),rgba(2, 13, 71, 0.925) ), url(../img/bld2.jpg);
+  padding: 100px;
+  background-attachment: fixed;
+  background-position: center;
+background-size: cover;
+border-radius: 5px;
+height: 900px;
+
+}
+
+.attach2 .form-group input{
+  border:none;  
+  border-radius: 3px;
+    font-size:17px;
+    width: 100%;
+    padding: 18px;
+    color: rgb(255, 255, 255);
+    background: rgba(77, 66, 179, 0.568);
+  }
+ 
+  ::placeholder{
+color: rgb(252, 252, 252);
+  }
+  .attach2 .form-group select{
+    border:none;  
+    border-radius: 3px;
+      margin: 8px 0px  0px 0px;
+      font-size:17px;
+      width: 100%;
+      padding: 15px;
+      color: #fff;
+      background: rgba(77, 66, 179, 0.568);
+  }
+
+
+  .attach3 .card{
+    padding: 40px;
+    background:rgba(230, 230, 231, 0.5);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+  .card h3{
+    margin: 5px;
+  }
+  .card p{
+    margin: 10px;
+    font-size:20px;
+    font-weight: 450;
+  }
+
+  .card span{
+    font-weight:800;
+    font-size:21px;
+  }
+
+  .pagination{
+float: right;
+  }
+
+/*courses-ends*/
+
+
+/*campus*/
+
+.parallax3{
+  background-image: linear-gradient(rgba(80, 80, 94, 0), rgba(5, 5, 14, 0.993)), url(../img/students.jpg);
+width: 100%;
+margin-top: 60px;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+font-family:monospace ;
+
+}
+
+
+.parallax3 .camptop{
+  padding:240px 0px 50px 0px;
+  font-family:monospace ;
+
+}
+
+.parallax3 .camptop h1{
+font-size: 55px;
+text-shadow: 1px 2px 1px rgb(39, 39, 39);
+
+}
+
+.line2{
+  border: 2px solid gold;
+  margin:30px 0px 30px 25px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.parallax3 .camptop p{
+  margin-top:20px ;
+line-height: 35px;
+font-size: 20px;
+
+}
+
+.camptop1{
+  font-family:monospace ;
+  font-weight: bold;
+
+}
+
+.camptop1 h1{
+  margin: 80px 0px 40px 0px;
+font-weight: bold;
+}
+
+.campsect{
+  margin:70px 20px 10px 20px;
+  padding: 50px;
+}
+
+.camptop1-0{
+ padding-left : 50px ;
+
+}
+
+.camptop1-1{
+  width: 100%;
+padding:60px ;
+}
+
+.camptop1 h3{
+  margin: 80px 0px 40px 0px;
+font-weight: bold;
+}
+
+.camptop1 p{
+  margin: 50px 0px 40px 0px;
+font-weight: bold;
+font-size: 18px;
+}
+
+
+.camp-section {
+  margin: 30px;
+  padding: 5px;
+  width: 100%;
+}
+
+.camp-section h4{
+font-weight: bolder;
+text-shadow: 1px 1px 1px #000;
+}
+
+.camp-section img{
+  margin: 20px 0px 20px 0px;
+   height:240px;
+   width: 100%;
+}
+
+.camp-section .col-lg-4{
+margin: 10px 0px 10px 0px;
+}
+
+.section3{
+  background-image: linear-gradient(rgba(10, 10, 32, 0.829),rgba(9, 9, 31, 0.863)), url(../img/buld2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px;
+  font-family:monospace ;
+  line-height: 35px;
+}
+
+.section3 h2{
+margin:0px 20px 30px 20px;
+font-size: 35px;
+}
+
+.section3 p{
+font-weight: bold;
+font-size: 17px;
+}
+
+.campdown{
+  width: 100%;
+}
+
+.campdown p{
+padding: 50px;
+font-weight: bold;
+font-size: 25px;
+}
+
+.bg-grey{
+  background:rgba(226, 226, 226, 0.74);
+}
+/*campus-ends*/
+
+.bg-icon img{
+margin: 10px 15px 50px 10px;
+}
+
+
+.bg-icon img:hover{
+  transform: rotateY(360deg);
+  transition: all 1.5s ease-out;
+  cursor: pointer;
+  opacity: 0.8;
+  }
+
+  .blockquote-custom{
+    margin-top: 60px;
+    position: relative;
+  }
+
+  .blockquote-custom-icon{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 5px;
+    left: 50px;
+  }
+  .blockquote-custom-icon i{
+  margin: 20px;
+  font-size: 25px;
+  }
+
+
+/*campus-tour*/
+
+.c-page{
+  background-image: linear-gradient(rgba(20, 20, 131, 0.158), rgba(14, 21, 88, 0.39)), url(../img/buildingc.jpg);
+  width: 100%;
+height:550px;
+margin-top: 60px;
+background-size: cover;
+background-position: center ;
+background-attachment: fixed;
+border-radius: 10px;
+text-shadow: 2px 2px 2px rgb(53, 53, 53);
+}
+
+.c-page .c-top h3{
+  margin-top: 300px;
+  margin-left: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  }
+  
+  .c-top h1{
+  font-size: 65px;
+  margin-left: 50px;
+  }
+  
+
+.c-page2 {
+width: 100%;
+font-weight: bold;
+margin-top: 20px;
+}
+
+.c-page2-0 {
+  padding: 50px;
+  margin-top: 50px;
+  height: 500px;
+
+  }
+
+  .c-page2-0 h1{
+  margin: 30px 0px 20px 0px;
+  font-weight: bolder;
+  font-size: 35px;
+
+    }
+    
+
+.accordion{
+  padding:40px 0px 50px 0px;
+
+}
+
+.c-page2-1{
+  background-image: linear-gradient(rgba(20, 20, 131, 0.158), rgba(14, 21, 88, 0.39)), url(../img/buld2.jpg);
+width: 100%;
+height: 500px;
+background-size: cover;
+background-position: center ;
+padding: 0;
+margin: 0;
+}
+
+
+.c-page3{
+padding: 80px 0px 40px 0px;
+
+}
+
+.c-page3 h1 {
+  font-weight: bolder;
+
+}
+
+.c-page4{
+  padding: 50px 0px 20px 0px;
+  font-weight: bold;
+
+  }
+
+.c-page4 h1{
+    padding: 50px 0px 20px 0px;
+    font-weight: bolder;
+
+    }
+
+    .c-page4 h2{
+      padding: 20px 0px 20px 0px;
+      font-weight: bolder;
+  
+      }
+
+.c-page4 .form-control-lg {
+border: 2px solid rgba(0, 0, 0, 0.507);
+background: transparent;
+width: 100%;
+padding: 15px;
+margin-top: 5px;
+border-radius: 5px;
+font-weight: bold;
+
+}
+
+
+.c-page4 ::placeholder{
+  color: rgba(0, 0, 0, 0.705);
+  font-weight: bold;
+}
+
+@media only screen and (max-width:800px)
+{
+  .c-page{
+  width: 100%;
+  height:400px;
+  margin-top: 60px;
+  background-size: cover;
+  background-position: center ;
+  background-attachment: fixed;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px rgb(53, 53, 53);
+  }
+  
+  .c-page .c-top h3{
+    margin-top: 200px;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    }
+    
+    .c-top h1{
+    font-size: 50px;
+    margin-left: 10px;
+    font-weight: bold;
+
+    }
+
+}
+
+@media only screen and (max-width:450px)
+{
+  .c-page{
+  width: 100%;
+  height:202px;
+  margin-top: 60px;
+  background-size: cover;
+  background-position: center ;
+  background-attachment: fixed;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px rgb(53, 53, 53);
+  }
+  
+  .c-page .c-top h3{
+    margin-top: 80px;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    }
+    
+    .c-top h1{
+    font-size: 35px;
+    margin-left: 10px;
+    font-weight: bold;
+
+    }
+
+}
+
+
+/*campus-tour-ends*/
+
+/*footer*/
+  .footer{
+    background: rgb(19, 19, 19);
+    margin: 0;
+    padding: 20px 30px 10px 30px;
+  }
+
+.footer .col-lg-3{
+  margin: 30px 0px 20px 0px;
+}
+
+  .f-line{
+    border: 1px solid rgb(202, 172, 0);
+  border-radius: 10px;
+  margin: 20px 0px 17px 0px;
+  }
+
+
+
+  .footer p{
+    color: rgb(177, 177, 177);
+    font-weight: 500;
+  }
+  .footer a{
+    text-decoration: none;
+  }
+
+.footer a p:hover {
+  color: rgb(255, 255, 255);
+}
+
+  .footer-copyright{
+    background: rgba(22, 22, 22, 0.938);
+    padding-bottom: 10px;
+    color: rgb(216, 213, 213);
+  }
+
+  .footer-copyright p{
+    display: inline-block;
+    margin:30px 50px 0px 0px ;
+      }
+
+ .footer-copyright ul li{
+display: inline-block;
+margin:30px 5px 0px 5px ;
+  }
+
+  .footer-copyright ul li :hover{
+    transform: rotateY(360deg);
+  transition: all 1.5s ease-out;
+  cursor: pointer; 
+  }
+
+  @media only screen and (max-width:790px)
+{
+  .footer-copyright p{
+text-align: center;
+margin:30px 0px 0px 20px ;
+}
+      .footer-copyright ul{
+       margin-right: 30px;
+              }
+
+}
+
+@media only screen and (max-width:790px)
+{
+
+
+}
